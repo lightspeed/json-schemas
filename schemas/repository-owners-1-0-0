@@ -1,6 +1,6 @@
 {
 	"$schema": "http://json-schema.org/draft-07/schema#",
-	"$comment": "https://github.com/salty-hashes/repository-owners",
+	"$comment": "https://github.com/lightspeed/repository-owners",
 	"title": "Repository Onwers",
 	"description": "Defines what a valid repository owner file is",
 	"self": {
