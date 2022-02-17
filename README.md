@@ -21,18 +21,17 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#">About The Project</a></li>
-    <li><a href="#">Installation</a></li>
-    <li><a href="#">Updating the Schema</a></li>
-    <li><a href="#">Using the Schema</a></li>
-    <li><a href="#">Contributing</a></li>
-    <li><a href="#">Project feedback</a></li>
-    <li><a href="#">License</a></li>
+    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#%EF%B8%8F-installation">Installation</a></li>
+    <li><a href="à#-using-the-schema">Using the Schema</a></li>
+    <li><a href="#-contributing">Contributing</a></li>
+    <li><a href="#%EF%B8%8F-project-feedback">Project feedback</a></li>
+    <li><a href="#%EF%B8%8F-license">License</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
+## 💁🏻‍♂️ About The Project
 
 To faciliate writing and maintaining valid configuration files and JSON files,
 we needed a way to defined the specific structure. Paired with a compatible IDE
@@ -101,5 +100,5 @@ Schema`:
 ## ⚠️ License
 
 The MIT License (MIT) 2022 - [Lightspeed Commerce
-inc.](https://lightspeedhq.com) Please have a look at the [LICENSE](./LICENSE.md)
-for more details.
+inc.](https://lightspeedhq.com) Please have a look at the
+[LICENSE](./LICENSE.md) for more details.
