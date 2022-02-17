@@ -21,9 +21,9 @@
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#%EF%B8%8F-about-the-project">About The Project</a></li>
     <li><a href="#%EF%B8%8F-installation">Installation</a></li>
-    <li><a href="à#-using-the-schema">Using the Schema</a></li>
+    <li><a href="#-using-the-schema">Using the Schema</a></li>
     <li><a href="#-contributing">Contributing</a></li>
     <li><a href="#%EF%B8%8F-project-feedback">Project feedback</a></li>
     <li><a href="#%EF%B8%8F-license">License</a></li>
@@ -60,7 +60,7 @@ The easiest way to leverage one of these schemas is to reference it in your JSON
 or YAML file and use a compatible IDE like Visual Studio Code:
 
 ```json
-
+"$schema": "https://raw.githubusercontent.com/lightspeed/json-schemas/main/schemas/repository-owners-1-0-0",
 ```
 
 ```yaml
@@ -77,7 +77,7 @@ Once you are done with your new file, you can run the following command to
 validate it:
 
 ```bash
-jv schemas/schema-1-1-1
+jv schemas/schema-1-0-0
 ```
 
 If the output is empty, the schema is valid.
