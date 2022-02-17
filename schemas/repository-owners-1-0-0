@@ -1,0 +1,107 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"$comment": "https://github.com/salty-hashes/repository-owners",
+	"title": "Repository Onwers",
+	"description": "Defines what a valid repository owner file is",
+	"self": {
+	  "vendor": "com.lightspeed",
+	  "name": "Repository Owners",
+	  "format": "jsonschema",
+	  "version": "1-1-1"
+	},
+	"type": "object",
+	"properties": {
+	  "owner": {
+		"description": "The GitHub owner of the repository.",
+		"type": "string"
+	  },
+	  "repository": {
+		"description": "The respository that ",
+		"type": "string"
+	  },
+	  "lastUpdate": {
+		"description": "The last time the repoository-owner file was updated.",
+		"type": "string",
+		"format": "date"
+	  },
+	  "vertical": {
+		"description": "The Lightspeed product vertical.",
+		"type": "string"
+	  },
+	  "securityTeam": {
+		"description": "The security team that is assisting the teams.",
+		"type": "string"
+	  },
+	  "productManagers": {
+		"description": "One or many product managers working on this repository.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
+	  "leadDevelopers": {
+		"description": "One or many lead developers emails.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
+	  "qaLeads": {
+		"description": "One or many lead QA specialists.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
+	  "teams": {
+		"description": "One or many teams responsible for this repository.",
+		"type": "array",
+		"properties": {
+		  "name": {
+			"type": "string",
+			"description": "The name of the team."
+		  },
+		  "email": {
+			"type": "string",
+			"format": "email",
+			"description": "We have emails in the form of ABCD.dept or ABCD.local; head over to Google Group to find or define your squad/team group there."
+		  },
+		  "slack": {
+			"type": "object",
+			"properties": {
+			  "channel": {
+				"type": "string",
+				"description": "One or many public Slack Channels."
+			  },
+			  "group": {
+				"description": "One or many Slack Group names.",
+				"type": "string",
+				"format": "email"
+			  }
+			}
+		  }
+		}
+	  },
+	  "bugTrackingSystem": {
+		"description": "The type of bug tracking system.",
+		"type": "string",
+		"enum": [
+		  "jira",
+		  "github",
+		  "monday"
+		]
+	  },
+	  "bugTrackingSystemURL": {
+		"description": "The URL of the bug tracking system.",
+		"type": "string",
+		"format": "uri"
+	  }
+	},
+	"required": [
+	  "owner",
+	  "repository",
+	  "lastUpdate",
+	  "vertical",
+	  "securityTeam"
+	]
+  }
