@@ -33,7 +33,7 @@
 		"type": "string"
 	  },
 	  "productManagers": {
-		"description": "One or many product managers working on this repository.",
+		"description": "One or many product managers emails working on this repository.",
 		"type": "array",
 		"items": {
 		  "format": "email"
@@ -47,7 +47,7 @@
 		}
 	  },
 	  "qaLeads": {
-		"description": "One or many lead QA specialists.",
+		"description": "One or many lead QA specialists emails.",
 		"type": "array",
 		"items": {
 		  "format": "email"
