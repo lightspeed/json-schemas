@@ -71,6 +71,13 @@
 		  "format": "email"
 		}
 	  },
+	  "qaLeadsL2": {
+		"description": "One or many lead QA specialists emails of an higher level.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
 	  "designLeads": {
 		"description": "One or many lead designer emails.",
 		"type": "array",
