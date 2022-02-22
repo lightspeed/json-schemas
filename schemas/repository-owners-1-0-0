@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"$comment": "https://github.com/lightspeed/repository-owners",
 	"title": "Repository Onwers",
-	"description": "Defines what a valid repository owner file is",
+	"description": "Defines what a valid repository owner file is.",
 	"self": {
 	  "vendor": "com.lightspeed",
 	  "name": "Repository Owners",
@@ -16,13 +16,17 @@
 		"type": "string"
 	  },
 	  "repository": {
-		"description": "The respository that ",
+		"description": "The present respository.",
 		"type": "string"
 	  },
 	  "lastUpdate": {
-		"description": "The last time the repoository-owner file was updated.",
+		"description": "The last time the repoository-owners file was updated.",
 		"type": "string",
 		"format": "date"
+	  },
+	  "product": {
+		"description": "The Lightspeed product this repository is tied to.",
+		"type": "string"
 	  },
 	  "vertical": {
 		"description": "The Lightspeed product vertical.",
@@ -33,7 +37,14 @@
 		"type": "string"
 	  },
 	  "productManagers": {
-		"description": "One or many product managers working on this repository.",
+		"description": "One or many product managers emails working on this repository.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
+	  "productManagersL2": {
+		"description": "One or many product managers emails working on this repository of an higher level.",
 		"type": "array",
 		"items": {
 		  "format": "email"
@@ -46,8 +57,43 @@
 		  "format": "email"
 		}
 	  },
+	  "leadDevelopersL2": {
+		"description": "One or many lead developers emails of an higher level.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
 	  "qaLeads": {
-		"description": "One or many lead QA specialists.",
+		"description": "One or many lead QA specialists emails.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
+	  "qaLeadsL2": {
+		"description": "One or many lead QA specialists emails of an higher level.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
+	  "designLeads": {
+		"description": "One or many lead designer emails.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
+	  "designLeadsL2": {
+		"description": "One or many lead designer emails of a higher level.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
+	  "productSpecialists": {
+		"description": "One or many product specialists emails. This is somebody from Support.",
 		"type": "array",
 		"items": {
 		  "format": "email"
@@ -58,23 +104,42 @@
 		"type": "array",
 		"properties": {
 		  "name": {
-			"type": "string",
-			"description": "The name of the team."
+			"description": "The name of the team.",
+			"type": "string"
 		  },
 		  "email": {
+			"description": "We have emails in the form of ABCD.dept or ABCD.local; head over to Google Group to find or define your squad/team group there.",
 			"type": "string",
-			"format": "email",
-			"description": "We have emails in the form of ABCD.dept or ABCD.local; head over to Google Group to find or define your squad/team group there."
+			"format": "email"
 		  },
 		  "slack": {
 			"type": "object",
 			"properties": {
 			  "channel": {
-				"type": "string",
-				"description": "One or many public Slack Channels."
+				"description": "One or many public Slack Channels.",
+				"type": "string"
 			  },
 			  "group": {
 				"description": "One or many Slack Group names.",
+				"type": "string",
+				"format": "email"
+			  }
+			}
+		  },
+		  "bugTrackingSystem": {
+			"type": "object",
+			"properties": {
+			  "type": {
+				"description": "The type of bug tracking system.",
+				"type": "string",
+				"enum": [
+				  "jira",
+				  "github",
+				  "monday"
+				]
+			  },
+			  "url": {
+				"description": "The URL of the bug tracking URL.",
 				"type": "string",
 				"format": "email"
 			  }
@@ -83,24 +148,30 @@
 		}
 	  },
 	  "bugTrackingSystem": {
-		"description": "The type of bug tracking system.",
-		"type": "string",
-		"enum": [
-		  "jira",
-		  "github",
-		  "monday"
-		]
-	  },
-	  "bugTrackingSystemURL": {
-		"description": "The URL of the bug tracking system.",
-		"type": "string",
-		"format": "uri"
+		"type": "object",
+		"properties": {
+		  "type": {
+			"description": "The type of bug tracking system.",
+			"type": "string",
+			"enum": [
+			  "jira",
+			  "github",
+			  "monday"
+			]
+		  },
+		  "url": {
+			"description": "The URL of the bug tracking URL.",
+			"type": "string",
+			"format": "url"
+		  }
+		}
 	  }
 	},
 	"required": [
 	  "owner",
 	  "repository",
 	  "lastUpdate",
+	  "product",
 	  "vertical",
 	  "securityTeam"
 	]
