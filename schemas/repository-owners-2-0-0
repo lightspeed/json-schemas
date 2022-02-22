@@ -162,7 +162,7 @@
 		  "url": {
 			"description": "The URL of the bug tracking URL.",
 			"type": "string",
-			"format": "email"
+			"format": "url"
 		  }
 		}
 	  }
