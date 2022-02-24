@@ -36,6 +36,13 @@
 		"description": "The security team that is assisting the teams.",
 		"type": "string"
 	  },
+	  "leadership": {
+		"description": "One ore many leadership emails responsible for the product(s) using this repository.",
+		"type": "array",
+		"items": {
+		  "format": "email"
+		}
+	  },
 	  "productManagers": {
 		"description": "One or many product managers emails working on this repository.",
 		"type": "array",
@@ -176,3 +183,4 @@
 	  "securityTeam"
 	]
   }
+  
