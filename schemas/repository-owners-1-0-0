@@ -119,6 +119,10 @@
 			"type": "string",
 			"format": "email"
 		  },
+		  "githubGroup": {
+		  	"description": "The GitHub group used by the team. Usually a CoP",
+			"type": "string"
+		  }
 		  "slack": {
 			"type": "object",
 			"properties": {
@@ -128,8 +132,7 @@
 			  },
 			  "group": {
 				"description": "One or many Slack Group names.",
-				"type": "string",
-				"format": "email"
+				"type": "string"
 			  }
 			}
 		  },
@@ -148,9 +151,13 @@
 			  "url": {
 				"description": "The URL of the bug tracking URL.",
 				"type": "string",
-				"format": "email"
-			  }
-			}
+				"format": "url"
+			  },
+			  "projectCode": {
+				"description": "Project Code. Mainly used for Jira.",
+				"type": "string"
+			  }			
+		  	}
 		  }
 		}
 	  },
@@ -170,6 +177,10 @@
 			"description": "The URL of the bug tracking URL.",
 			"type": "string",
 			"format": "url"
+		  },
+		  "projectCode": {
+			"description": "Project Code. Mainly used for Jira.",
+			"type": "string"
 		  }
 		}
 	  }
